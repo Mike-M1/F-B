@@ -28,6 +28,14 @@ app.use('/blog', blogRoutes);
 
 
 
-app.listen(8000, () => console.log('Server is running on port 8000'))
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../dist/index.html"));
+  });
+
+  const port = process.env.PORT || 8080;
+
+  app.listen(port, () => {
+    console.log("Server is running on port " + port);
+  });
 
 export { app, db as default};
