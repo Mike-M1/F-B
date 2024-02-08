@@ -35,12 +35,8 @@ export default {
   methods: {
     async submitForm(){
 
-    const backendUrls = [
-    'http://localhost:8080',
-    process.env.VUE_APP_BACKEND_URL_PROD,
-    // Add more URLs if needed
-  ];
-      const backendUrl= 'http://localhost:8080';
+      
+      const backendUrl= 'https://fb123.netlify.app/';
 
 
       const response = await axios.post(`${backendUrl}/user`, {
