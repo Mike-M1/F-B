@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s,a as n}from"./index-ai-J-ULd.js";const o={name:"BenefitsVue"},c=n("h1",null,"Benfits",-1),a=[c];function r(_,i,f,d,l,p){return s(),t("div",null,a)}const B=e(o,[["render",r]]);export{B as default};

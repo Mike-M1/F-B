@@ -21,19 +21,31 @@
 <script>
 import axios from 'axios';
 
+
+
 export default {
   name: 'LogInVue',
   data(){
     return{
       email: '',
-      password: ''
+      password: '',
+
     }
   },
   methods: {
     async submitForm(){
-      const response = await axios.post('http://localhost:8000/user', {
+
+    const backendUrls = [
+    'http://localhost:8080',
+    process.env.VUE_APP_BACKEND_URL_PROD,
+    // Add more URLs if needed
+  ];
+      const backendUrl= 'http://localhost:8080';
+
+
+      const response = await axios.post(`${backendUrl}/user`, {
         email: this.email,
-        password: this.password
+        password: this.password,
       });
       console.log(response);
     }

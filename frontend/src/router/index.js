@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LogIn.vue')
+      component: () => import('../App.vue')
     },
     {
       path: '/benefits',
@@ -32,9 +32,11 @@ const router = createRouter({
       path: '/socialproof',
       name: 'socialproof',
       component: () => import('../views/SocialProof.vue')
+    },
+    {
+      path: '/',
+      redirect: () => import('../App.vue')
     }
-
-  
   ]
 })
 
